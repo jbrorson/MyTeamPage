@@ -1,0 +1,412 @@
+/* @import url("https://fonts.googleapis.com/css?family=Muli&display=swap") */
+
+* { /*EVERYTHING*/
+    box-sizing: border-box; 
+    /* font-family: sans-serif; */
+}
+/* BAKGRUNDSFÄRG */
+html, body{
+    background-color: #f1f1f1;  
+    margin: 0; 
+    padding: 0;  
+}
+/* BAKGRUNDSBILD LOGO Kolla om bättre att lägga in bild separat*/
+/* body{
+    background-image: url("icons/KB.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 30%; 
+} */
+
+/*Vill att header ska vara transparent*/
+.main-header{
+    background-color: rgba(94, 2, 2, 0.79);
+    padding-bottom: 20px;
+    padding: 2%;
+    margin: 0;
+
+    /* overflow: hidden; */
+
+}
+.content-container{
+    display: inline-block;
+    align-items: right; 
+}
+.main-header img{
+    width: 100px; 
+    height: 100px; 
+    display: flex;  
+    text-align: right; 
+    
+}
+/* NAVBAR (alla ul inuti nav stylas samma) */
+.nav ul{
+    margin: 0; 
+    padding: 0; 
+    background-color: rgba(94, 2, 2, 0.79);
+    display: flex; 
+    align-items: space-between;
+    float: left;
+    display: block;
+}
+/* NAVBAR links (alla li inuti nav stylas samma) */
+.nav li{
+    margin-left: 30px; 
+    display: inline;  
+    color: #FFFFFF; 
+    text-decoration: none;
+    padding: 0; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: 100px;
+    align-items: center; 
+}
+/* NAVBAR (alla a-taggar inuti nav stylas samma) */
+.nav a{
+    display: flex;
+    flex-direction: row;  
+    font-weight: bold;
+    padding: 0;
+    margin: 10px; 
+    color: #232323;} 
+
+/* .nav a:hover{
+    background-color: rgba(35, 35, 35, 0.468);
+}*/
+.main-nav{
+    /* text-align: center;  */
+    display: flex;
+    flex-direction: row;  
+    font-size: 1.1em;
+    border-bottom: 2px solid #232323; 
+    padding: 0;
+    margin: 5px; 
+    /* display: flex; 
+    align-items: center; 
+    justify-content: space-between;  */
+     
+}
+.main nav li{
+    padding: 0 5%; /*0 top och bottom 5 left &right*/
+}
+/* LOGINSIDA */
+.form{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    flex-direction: column; 
+}
+#username{
+    background-color: rgba(11, 11, 11, 0.1)
+}
+#username:hover{
+    background-color: rgb(179, 177, 177);
+}
+#password{
+    background-color: rgba(11, 11, 11, 0.1)
+}
+#password:hover{
+    background-color: rgb(179, 177, 177);
+}
+
+
+h1{
+    color: #232323; 
+    padding: 3%;
+    margin: 0; 
+    text-align: center; 
+}
+
+h1 span:hover{ /*Ladies in header h1*/
+    color: green;
+}
+.content{
+    margin: 1em; /*1 */
+}
+.container{
+    max-width: 750px; /*stannar vid 750 pixlar*/
+    margin: 0 auto; /*left & right är så stora de behöver bli*/
+    padding: 0 1.5em; /*0 top & bottom*/
+}
+.content-about{
+    margin: 0;
+    padding: .2em; 
+    text-align: center; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+.games-season{
+    margin: 0;
+    padding: .5em; 
+    text-align: center; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.main-footer{
+    background-color: rgba(94, 2, 2, 0.79);
+    color: #232323; 
+    padding: .25 0; /*top&bottom left&right*/
+}
+/* Skapa en container så jag kan använda flexbox */
+.main-footer-container{
+    display: flex; 
+    align-items: center; 
+}
+.main-footer-container ul{
+    flex-grow: 1; 
+    text-align: end; 
+}
+.footer-nav li{
+    padding: 0 .5em;
+}
+.footer-nav img{
+    width: 30px;
+    height: 30px;
+}
+.games-container2{
+    color: black; 
+    margin: 20px; 
+    padding: 20px; 
+    border-bottom: 2px solid black; 
+}
+.buttn{
+    border-radius: 6px;  
+    display: flex; 
+    align-items: center;
+    background: transparent; 
+    border: 2px solid rgba(94, 2, 2, 0.79);   
+}
+.buttn:hover{
+    background-color: rgba(165, 165, 165, 0.92)
+}
+
+.flex-parent{
+    border: 3px solid black;
+    height: 500px; 
+    display: flex; 
+    align-items: flex-start;
+    flex-direction: column; 
+    flex-wrap: wrap; 
+    justify-content: space-around;
+}
+
+a{ /*FÄRG PÅ A-TAGGAR*/
+  text-decoration: none;
+  color:#cdcdcd;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+a:hover /*FÄRG NÄR HOVER ÖVER*/
+{
+    color: rgb(94, 61, 61);
+    font-size: 1.2em;
+    
+}
+
+#menuToggle
+{
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  z-index: 1; /*Gör att navbar poppar framför*/
+  
+  /* -webkit-user-select: none;
+  user-select: none; */
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  /* color: whitesmoke;  */
+  
+  cursor: pointer; /*detta get mig ett "finger" när jag hover*/
+  
+  opacity: 0; /*gömmer checkbox*/
+  z-index: 2; /*placerar X framför hamburgare*/
+}
+/*HAMBURGAREN*/
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;   
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  /*KRYSSET*/
+  transform-origin: 4px 0px;
+  transition: transform 0.7s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.7s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+/*GÖR HAMBURGAREN TILL ETT KRYSS*/
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #cdcdcd; 
+}
+/*EFTERSOM HAMBURGAREN FRÅN BÖRJAN HAR TRE STRECK
+Ett måste bort, de andra vänder sig i motsatt riktning*/
+#menuToggle input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: rgba(31, 31, 31, 0.776);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.3s cubic-bezier(0.5,0.5,0.5,0.5); 
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+/*LOGIN FORM*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+body {
+  background: #76b852; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
